@@ -7,10 +7,10 @@ export function BrandsSection() {
   return (
     <section
       id="marcas-produtos"
-      className="border-y border-border bg-gradient-to-b from-[#faf6fd]/60 via-muted/50 to-[#faf6fd]/60 py-20"
+      className="border-y border-border bg-gradient-to-b from-[#faf6fd]/60 via-muted/50 to-[#faf6fd]/60 py-[clamp(1.5rem,5svh,3.5rem)]"
     >
-      <div className="mx-auto max-w-7xl px-6 md:px-8">
-        <div className="mb-14 max-w-3xl">
+      <div className="mx-auto w-full max-w-7xl px-6 md:px-8">
+        <div className="mb-[clamp(1rem,4svh,3rem)] max-w-3xl">
           <div className="mb-3 inline-flex items-center gap-2 rounded-full border border-border bg-secondary px-3 py-1 text-xs font-semibold text-primary">
             <Factory className="size-4" />
             Ampla Cobertura Especializada
@@ -25,7 +25,7 @@ export function BrandsSection() {
           </p>
         </div>
 
-        <div className="mb-16">
+        <div className="mb-[clamp(1.5rem,4svh,3rem)]">
           <div className="mb-6 flex items-center gap-3">
             <Stars className="size-6 text-primary" />
             <h3 className="font-heading text-xl font-semibold text-primary">

@@ -50,6 +50,10 @@
 }
 
 :root {
+    /* h-20 (5rem) + border-b de 1px do Header. Manter exato: qualquer
+       diferença em relação à altura real vira um desalinhamento sistemático
+       no scroll-padding-top e no min-height do formulário. */
+    --header-height: calc(5rem + 1px);
     --background: #f9f9f9;
     --foreground: #1b1b1b;
     --card: #ffffff;
@@ -128,4 +132,19 @@
   html {
     @apply font-sans;
     }
+}
+
+html {
+  /* Fallback para navegação por âncora nativa (link direto, voltar/avançar
+     do navegador). O clique pelo Header usa navigateToSection() em JS, que
+     mede a altura real do header — mantemos os dois valores em sincronia
+     porque a altura do header é fixa (h-20). Não duplicar este offset como
+     scroll-margin-top nas seções: os dois se somam e dobram o espaço. */
+  scroll-padding-top: calc(var(--header-height) + 0.5rem);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
 }

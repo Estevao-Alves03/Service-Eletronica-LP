@@ -14,7 +14,7 @@ export const company = {
     zip: "74210-100",
     mapsUrl: "https://maps.app.goo.gl/BwJ3t5Hy1RGjz5dz5",
     mapsEmbedUrl:
-      "https://www.google.com/maps?q=Service+Eletronica,-16.6861867,-49.2852592&z=17&output=embed",
+      "https://www.google.com/maps?q=-16.6861867,-49.2852592&z=17&output=embed",
   },
   hours: {
     weekdays: "Seg–Sex: 08:30–18:00",
