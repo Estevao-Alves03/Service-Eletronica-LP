@@ -17,7 +17,7 @@ export const company = {
       "https://www.google.com/maps?q=-16.6861867,-49.2852592&z=17&output=embed",
   },
   hours: {
-    weekdays: "Seg–Sex: 08:30–18:00",
+    weekdays: "Seg–Sex: 08:00–18:00",
     weekendsAndHolidays: "Sáb, Dom e Feriados: Fechado",
   },
   contact: {

@@ -10,9 +10,9 @@ export function BrandCard({ brand }: BrandCardProps) {
       <span className="font-heading text-2xl font-bold tracking-tight text-primary transition-colors group-hover:text-[#38005b]">
         {brand.name}
       </span>
-      <span className="mt-1 text-[11px] text-muted-foreground group-hover:text-[#603083]">
+      {/* <span className="mt-1 text-[11px] text-muted-foreground group-hover:text-[#603083]">
         Assistência Técnica
-      </span>
+      </span> */}
     </div>
   );
 }

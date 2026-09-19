@@ -37,7 +37,7 @@ export function Hero() {
   return (
     <section
       id="sobre"
-      className="relative overflow-hidden bg-gradient-to-b from-[#fbf8fe] via-[#faf6fd] to-background pt-12 pb-20 md:py-24"
+      className="relative overflow-hidden bg-linear-to-b from-[#fbf8fe] via-[#faf6fd] to-background pt-12 pb-20 md:py-24"
     >
       <div className="pointer-events-none absolute -top-32 right-0 h-96 w-96 rounded-full bg-purple-200/30 blur-3xl" />
 
@@ -47,8 +47,8 @@ export function Hero() {
             <BadgeCheck className="size-4" />
             Centro Técnico Especializado
           </span>
-          <span className="inline-flex items-center gap-1.5 rounded-full border border-border/70 bg-white px-3.5 py-1.5 text-xs font-semibold text-[#603083] shadow-xs">
-            <Shield className="size-4 text-[#79499c]" />
+          <span className="inline-flex items-center gap-1.5 rounded-full border border-border bg-secondary px-3.5 py-1.5 text-xs font-medium text-primary shadow-xs">
+            <Shield className="size-4" />
             Garantia e Procedência
           </span>
         </div>

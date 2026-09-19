@@ -48,7 +48,7 @@ export function Navigation({
           key={link.href}
           href={link.href}
           onClick={(event) => handleClick(event, link.href)}
-          className="relative text-sm font-semibold text-primary transition-colors after:absolute after:-bottom-1 after:left-1/2 after:h-[2px] after:w-0 after:-translate-x-1/2 after:rounded-full after:bg-primary after:transition-all after:duration-300 hover:text-[#4f087c] hover:after:w-full"
+          className="relative text-sm font-semibold text-primary transition-colors after:absolute after:-bottom-1 after:left-1/2 after:h-0.5 after:w-0 after:-translate-x-1/2 after:rounded-full after:bg-primary after:transition-all after:duration-300 hover:text-[#4f087c] hover:after:w-full"
         >
           {link.label}
         </a>

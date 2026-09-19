@@ -66,7 +66,7 @@ const STEPS: Step[] = [
 export function OutOfWarrantyService() {
   return (
     <div className="relative overflow-hidden rounded-3xl border border-border bg-white p-6 shadow-sm sm:p-10">
-      <div className="mb-8 flex flex-col gap-4 border-b border-[#f0e6f7] pb-6 md:flex-row md:items-center md:justify-between">
+      <div className="mb-8 flex flex-col gap-4 border-[#f0e6f7] md:flex-row md:items-center md:justify-between">
         <div>
           <div className="mb-1 flex items-center gap-2.5">
             <span className="rounded-full border border-border bg-secondary px-3 py-1 text-xs font-semibold text-primary">
@@ -81,7 +81,7 @@ export function OutOfWarrantyService() {
           </h3>
         </div>
         <div className="flex shrink-0 items-center gap-2 rounded-xl border border-border/80 bg-[#faf6fd] px-4 py-2 text-sm font-medium text-primary">
-          <Clock className="size-[18px]" />
+          <Clock className="size-4.5" />
           <span>
             Prazo médio de diagnóstico: <strong>3 a 5 dias úteis</strong>
           </span>
@@ -101,11 +101,13 @@ export function OutOfWarrantyService() {
                 </span>
                 <step.icon className="size-6 text-[#603083]" />
               </div>
-              {step.badge && (
-                <div className="mb-1.5 inline-block rounded-md border border-border bg-secondary px-2 py-0.5 text-[11px] font-semibold text-primary">
-                  {step.badge}
-                </div>
-              )}
+              <div className="mb-1.5 h-6">
+                {step.badge && (
+                  <span className="inline-block rounded-md border border-border bg-secondary px-2 py-0.5 text-[11px] font-semibold text-primary">
+                    {step.badge}
+                  </span>
+                )}
+              </div>
               <h4 className="mb-2 font-semibold text-primary">{step.title}</h4>
               <p className="text-sm leading-relaxed text-muted-foreground">
                 {step.description}
@@ -118,7 +120,7 @@ export function OutOfWarrantyService() {
         ))}
       </div>
 
-      <div className="mt-8 flex flex-col items-center justify-between gap-4 rounded-2xl border border-border/70 bg-[#fbf8fe] p-5 sm:flex-row">
+      <div className="mt-8 flex flex-col items-center justify-between gap-4 rounded-2xl border border-border bg-[#fbf8fe] p-5 sm:flex-row">
         <div className="flex items-center gap-3">
           <span className="flex size-10 shrink-0 items-center justify-center rounded-xl bg-secondary text-primary">
             <HelpCircle className="size-6" />
@@ -137,7 +139,7 @@ export function OutOfWarrantyService() {
           className="inline-flex shrink-0 items-center gap-2 rounded-xl bg-primary px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition-all hover:bg-[#4f087c]"
         >
           Tirar Dúvida no WhatsApp
-          <ArrowRight className="size-[18px]" />
+          <ArrowRight className="size-4.5" />
         </a>
       </div>
     </div>

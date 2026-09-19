@@ -4,7 +4,7 @@ import { company } from "@/data/company";
 export function Location() {
   return (
     <div className="lg:col-span-5">
-      <div className="relative rounded-2xl border border-border bg-white p-6 shadow-sm transition-all hover:shadow-lg hover:shadow-purple-900/5">
+      <div className="relative rounded-2xl border border-purple-300/95 bg-white p-6 shadow-sm transition-all hover:shadow-lg hover:shadow-purple-900/5">
         <div className="mb-5 flex items-center justify-between border-b border-[#f0e6f7] pb-4">
           <div className="flex items-center gap-3">
             <div className="flex size-10 items-center justify-center rounded-xl border border-border bg-secondary text-primary">
@@ -44,7 +44,7 @@ export function Location() {
             </div>
           </div>
 
-          <div className="flex items-start gap-3 rounded-xl border border-border/70 bg-[#faf6fd] p-3.5">
+          <div className="flex items-start gap-3 rounded-xl border border-purple-300/95 bg-[#faf6fd] p-3.5">
             <Clock className="mt-0.5 size-5 shrink-0 text-primary" />
             <div>
               <span className="text-[11px] font-semibold uppercase tracking-wide text-primary">
@@ -60,7 +60,7 @@ export function Location() {
           </div>
         </div>
 
-        <div className="mb-5 overflow-hidden rounded-xl border border-border">
+        <div className="mb-5 overflow-hidden rounded-xl border border-purple-300/95">
           <iframe
             src={company.address.mapsEmbedUrl}
             title={`Mapa de localização — ${company.name}`}
@@ -74,7 +74,7 @@ export function Location() {
           href={company.address.mapsUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex w-full items-center justify-center gap-2 rounded-xl border border-primary py-3 text-sm font-semibold text-primary shadow-xs transition-all hover:bg-primary hover:text-white"
+          className="flex w-full items-center justify-center gap-2 rounded-xl border border-purple-300/95 py-3 text-sm font-semibold text-primary shadow-xs transition-all hover:bg-primary hover:text-white"
         >
           <Navigation className="size-4" />
           Como chegar / Ver rota

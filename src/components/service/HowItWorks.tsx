@@ -22,16 +22,16 @@ export function HowItWorks() {
           <h2 className="font-heading mb-3 text-3xl font-bold tracking-tight text-primary md:text-4xl">
             Como Funciona o Seu Atendimento
           </h2>
-          <p className="mx-auto max-w-2xl text-muted-foreground">
+          <p className="mx-auto max-w-2xl text-muted-foreground base-xs">
             Entenda passo a passo cada etapa do nosso processo para consertos
             fora de garantia ou no fluxo oficial de assistência autorizada.
           </p>
 
-          <div className="mx-auto mt-[clamp(1rem,2.5svh,2rem)] flex w-full max-w-xl justify-center rounded-2xl border border-border bg-white p-1.5 shadow-sm sm:w-auto">
+          <div className="mx-auto mt-4 flex w-full max-w-xl justify-center rounded-2xl border border-border bg-white p-1 sm:w-auto">
             <button
               type="button"
               onClick={() => setActiveTab("fora")}
-              className={`flex flex-1 items-center justify-center gap-2.5 rounded-xl px-6 py-3 text-sm font-semibold transition-all duration-200 sm:flex-initial ${
+              className={`flex flex-1 items-center justify-center gap-2 rounded-xl px-5 py-2.5 text-sm font-semibold transition-all duration-200 sm:flex-initial ${
                 activeTab === "fora"
                   ? "bg-primary text-white shadow-md"
                   : "text-primary hover:bg-secondary"
@@ -40,10 +40,11 @@ export function HowItWorks() {
               <Wrench className="size-5" />
               Fora de Garantia (Orçamento)
             </button>
+
             <button
               type="button"
               onClick={() => setActiveTab("garantia")}
-              className={`flex flex-1 items-center justify-center gap-2.5 rounded-xl px-6 py-3 text-sm font-semibold transition-all duration-200 sm:flex-initial ${
+              className={`flex flex-1 items-center justify-center gap-2 rounded-xl px-5 py-2.5 text-sm font-semibold transition-all duration-200 sm:flex-initial ${
                 activeTab === "garantia"
                   ? "bg-primary text-white shadow-md"
                   : "text-primary hover:bg-secondary"
@@ -55,7 +56,30 @@ export function HowItWorks() {
           </div>
         </div>
 
-        {activeTab === "fora" ? <OutOfWarrantyService /> : <WarrantyService />}
+        <div className="grid">
+          <div
+            className={`col-start-1 row-start-1 transition-opacity duration-200 ${
+              activeTab === "fora"
+                ? "opacity-100"
+                : "pointer-events-none opacity-0"
+            }`}
+            aria-hidden={activeTab !== "fora"}
+            inert={activeTab !== "fora" ? true : undefined}
+          >
+            <OutOfWarrantyService />
+          </div>
+          <div
+            className={`col-start-1 row-start-1 transition-opacity duration-200 ${
+              activeTab === "garantia"
+                ? "opacity-100"
+                : "pointer-events-none opacity-0"
+            }`}
+            aria-hidden={activeTab !== "garantia"}
+            inert={activeTab !== "garantia" ? true : undefined}
+          >
+            <WarrantyService />
+          </div>
+        </div>
       </div>
     </section>
   );

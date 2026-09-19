@@ -45,8 +45,8 @@ const PILLARS: Pillar[] = [
 
 export function WarrantyService() {
   return (
-    <div className="relative overflow-hidden rounded-3xl border border-border bg-gradient-to-br from-[#faf6fd] via-white to-[#fbf8fe] p-6 shadow-sm sm:p-10">
-      <div className="mb-8 flex flex-col gap-4 border-b border-border/70 pb-6 md:flex-row md:items-center md:justify-between">
+    <div className="relative overflow-hidden rounded-3xl border border-border bg-linear-to-br from-[#faf6fd] via-white to-[#fbf8fe] p-6 shadow-sm sm:p-10">
+      <div className="mb-8 flex flex-col gap-4 border-border/70 md:flex-row md:items-center md:justify-between">
         <div>
           <div className="mb-1 flex items-center gap-2.5">
             <span className="rounded-full border border-border bg-secondary px-3 py-1 text-xs font-semibold text-primary">
@@ -61,7 +61,7 @@ export function WarrantyService() {
           </h3>
         </div>
         <div className="flex shrink-0 items-center gap-2 rounded-xl border border-border bg-secondary px-4 py-2 text-sm font-semibold text-primary">
-          <BadgeCheck className="size-[18px]" />
+          <BadgeCheck className="size-4.5" />
           Peças 100% Originais Autorizadas
         </div>
       </div>
@@ -79,7 +79,9 @@ export function WarrantyService() {
               <div className="mb-2 inline-block rounded-md border border-border/80 bg-[#faf4fd] px-2 py-0.5 text-[11px] font-semibold text-primary">
                 {pillar.badge}
               </div>
-              <h4 className="mb-2 font-semibold text-primary">{pillar.title}</h4>
+              <h4 className="mb-2 font-semibold text-primary">
+                {pillar.title}
+              </h4>
               <p className="text-sm leading-relaxed text-muted-foreground">
                 {pillar.description}
               </p>
@@ -92,22 +94,30 @@ export function WarrantyService() {
         ))}
       </div>
 
-      <div className="flex flex-col items-center justify-between gap-6 rounded-2xl bg-primary p-6 text-white shadow-lg sm:p-8 md:flex-row">
-        <div className="space-y-1 text-center md:text-left">
-          <h4 className="font-heading text-xl font-bold text-white">
-            Pronto para validar sua garantia?
-          </h4>
-          <p className="max-w-xl text-sm text-purple-200/90">
-            Envie uma foto da sua nota fiscal e da etiqueta do aparelho para
-            validarmos o credenciamento de imediato.
-          </p>
+      <div className="mt-8 flex flex-col items-center justify-between gap-4 rounded-2xl border border-border bg-[#fbf8fe] p-5 sm:flex-row">
+        <div className="flex items-center gap-3">
+          <span className="flex size-10 shrink-0 items-center justify-center rounded-xl bg-secondary text-primary">
+            <MessageCircle className="size-5" />
+          </span>
+
+          <div>
+            <h4 className="text-sm font-semibold text-primary">
+              Pronto para validar sua garantia?
+            </h4>
+
+            <p className="text-xs text-muted-foreground">
+              Envie uma foto da sua nota fiscal e da etiqueta do aparelho para
+              validarmos o credenciamento de imediato.
+            </p>
+          </div>
         </div>
+
         <a
           href="#atendimento"
-          className="inline-flex shrink-0 items-center gap-2.5 rounded-xl bg-white px-8 py-3.5 text-sm font-semibold text-primary shadow-md transition-all hover:bg-[#faf4fd] active:scale-[0.98]"
+          className="inline-flex shrink-0 items-center gap-2 rounded-xl bg-primary px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition-all hover:bg-[#4f087c]"
         >
-          <MessageCircle className="size-5" />
           Falar com Consultor de Garantia
+          <MessageCircle className="size-4.5" />
         </a>
       </div>
     </div>

@@ -57,11 +57,11 @@ export function Footer() {
             </h4>
             <div className="space-y-2.5 text-sm text-purple-200/90">
               <div className="flex items-start gap-2">
-                <Phone className="mt-0.5 size-[18px] shrink-0 text-[#e2b6ff]" />
+                <Phone className="mt-0.5 size-4.5 shrink-0 text-[#e2b6ff]" />
                 <span>{company.contact.whatsappNumber}</span>
               </div>
               <div className="flex items-start gap-2">
-                <MapPin className="mt-0.5 size-[18px] shrink-0 text-[#e2b6ff]" />
+                <MapPin className="mt-0.5 size-4.5 shrink-0 text-[#e2b6ff]" />
                 <span>
                   {company.address.neighborhood}, {company.address.city} -{" "}
                   {company.address.state}

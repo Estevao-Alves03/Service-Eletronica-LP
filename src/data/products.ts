@@ -51,9 +51,9 @@ export const products: Product[] = [
 ];
 
 export const additionalProducts: AdditionalProduct[] = [
-  { name: "Barbeador" },
   { name: "Ferro Comum" },
+  { name: "Climatizador"},
   { name: "Ventilador" },
+  { name: "Barbeador",  warrantyOnly: true },
   { name: "Caixa de Som", warrantyOnly: true},
-  { name: "Climatizador", warrantyOnly: true },
 ];
